@@ -5,6 +5,7 @@ var reg = new RegExp(searchStr, 'g');
 
 function replaceString() {
   if (searchStr !== '') {
-    text = text.replace(reg, newStr)
+    text = text.replace(reg, newStr);
+    return text;
   } else { console.log(false) }
 }
