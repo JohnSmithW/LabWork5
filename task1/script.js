@@ -1,11 +1,7 @@
-var text = 'some text i have just typed , you can use some of my code and get a copyright strike';
-var searchStr = 's';
-var newStr = 'b';
-var reg = new RegExp(searchStr, 'g');
-
-function replaceString() {
+function replaceString(text, searchStr, newStr) {
+  searchStr = new RegExp(searchStr, 'g');
   if (searchStr !== '') {
-    text = text.replace(reg, newStr);
+    text = text.replace(searchStr, newStr);
     return text;
   } else { console.log(false) }
 }
