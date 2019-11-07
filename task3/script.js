@@ -1,13 +1,13 @@
-function flatArray(ary) {
+function flatArray(array) {
   var subArray = [];
-  for (let i = 0; i < ary.length; i++) {
-    ary = ary.filter(function (el) {
-      return (el !== null && el != NaN && el !== undefined);
+  for (let i = 0; i < array.length; i++) {
+    array = array.filter(function(el) {
+      return (!!el && typeof el[i] !== 'string');
     });
-    if (Array.isArray(ary[i])) {
-      subArray = subArray.concat(flatArray(ary[i]));
+    if (Array.isArray(array[i])) {
+      subArray = subArray.concat(flatArray(array[i]));
     } else {
-      subArray.push(ary[i]);
+      subArray.push(array[i]);
     }
   }
   return subArray;

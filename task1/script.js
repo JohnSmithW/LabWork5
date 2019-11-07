@@ -1,7 +1,9 @@
 function replaceString(text, searchStr, newStr) {
   searchStr = new RegExp(searchStr, 'g');
-  if (searchStr !== '') {
+  if (searchStr !== '' && typeof text === 'string') {
     text = text.replace(searchStr, newStr);
     return text;
-  } else { console.log(false) }
+  } else {
+    return false;
+  }
 }
