@@ -1,6 +1,6 @@
 function replaceString(text, searchStr, newStr) {
-  searchStr = new RegExp(searchStr, 'g');
-  if (searchStr !== '' && typeof text === 'string') {
+  if (searchStr !== '' && typeof text === 'string' && typeof searchStr === 'string' && typeof newStr ==='string') {
+    searchStr = new RegExp(searchStr, 'g');
     text = text.replace(searchStr, newStr);
     return text;
   } else {
