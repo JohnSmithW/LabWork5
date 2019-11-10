@@ -15,14 +15,14 @@ var Player = {
   },
   next: function() {
     this.currentTrack = (this.currentTrack + 1);
-    if (this.currentTrack > this.trackList.length + 1) {
+    if (this.currentTrack > this.trackList.length - 1) {
       this.currentTrack = 0;
     }
   },
   prev: function() {
     this.currentTrack = (this.currentTrack - 1);
     if (this.currentTrack < 0) {
-      this.currentTrack = this.trackList.length;
+      this.currentTrack = this.trackList.length - 1;
     }
   }
 };
